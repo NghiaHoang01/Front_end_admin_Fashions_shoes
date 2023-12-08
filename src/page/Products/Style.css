@@ -1,0 +1,86 @@
+.ant-typography pre,
+:where(.css-dev-only-do-not-override-1gjkxzf).ant-typography blockquote {
+    margin: 0em 0;
+    padding: 8px 11px;
+    border-radius: 6px;
+}
+
+.custom-btn {
+    position: relative;
+    border: 1px solid var(--red);
+    background-color: var(--red);
+    color: var(--white);
+    /* text-transform: uppercase; */
+    letter-spacing: 0.1em;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: bold;
+    transition: all 0.25s ease-in-out;
+}
+
+.custom-btn::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background-color: var(--white);
+    transform-origin: center right;
+    transform: scaleX(0);
+    transition: transform 0.25s ease-in-out;
+}
+
+.custom-btn:hover {
+    cursor: pointer;
+    color: var(--red);
+}
+
+.custom-btn:hover::before {
+    transform-origin: center left;
+    transform: scaleY(1);
+}
+
+.btn-disabled {
+    border: 1px solid var(--red);
+    background-color: var(--red);
+    color: var(--white);
+    /* text-transform: uppercase; */
+    letter-spacing: 0.1em;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: bold;
+    cursor: no-drop;
+    opacity: 0.7;
+}
+
+.form-search {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.show {
+    max-height: 300px;
+    animation: max-height 0.5s ease-in;
+}
+
+.hidden {
+    display: hidden;
+}
+
+.ant-btn-primary {
+    color: #fff;
+    background-color: var(--red) !important;
+    box-shadow: 0 2px 0 rgba(134, 29, 13, 0.19);
+}
+
+.ant-btn-primary:hover {
+    opacity: 0.7;
+}
+
+.ant-form-item .ant-form-item-label>label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    content: none;
+}
+
+.ant-tooltip {
+    display: none;
+}
